@@ -60,8 +60,7 @@ body {
   color: #1B3447;
   height: 100%;         /* Certifique-se que ocupa toda a altura */
   min-height: 400px;    /* Para garantir espaço pro iframe */
-    flex-wrap: wrap; /* ← permite quebrar se faltar espaço */
-
+  flex-wrap: wrap; /* ← permite quebrar se faltar espaço */
 }
 
 /* Player com bordas arredondadas */
@@ -162,7 +161,7 @@ button:hover {
 
       #mensagem {
         text-align: center;
-        order: 2; /* para ficar abaixo do player */
+        order: 1; /* para ficar abaixo do player */
       }
 
       #player iframe {
