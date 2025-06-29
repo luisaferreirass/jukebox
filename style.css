@@ -1,0 +1,168 @@
+#player.oculto {
+  display: none;
+}
+
+body {
+  font-family: "Indie Flower", cursive;
+  background: linear-gradient(135deg, #ffffff, #f0d3ee); /* azul claro a mais claro */
+      color: #4B3F72;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Faixa colorida no topo */
+.header {
+  width: 100%;
+  max-width: 960px;
+      background: linear-gradient(90deg, #f35081, #ff798f); /* rosa para amarelo claro */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  box-shadow: 0 3px 10px rgba(2, 136, 209, 0.4);
+  user-select: none;
+  border-radius: 12px;
+  margin-bottom: 35px;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  max-width: 1050px;
+  width: 100%;
+  
+  box-shadow: 0 6px 25px rgba(44, 62, 80, 0.15);
+  border-radius: 16px;
+  background: #FFFFFF;
+  overflow: hidden;
+  padding: 20px;
+  
+}
+
+/* Área do player + mensagem */
+.player-area {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0 40px;
+  background: #e9bed2;
+  box-sizing: border-box;
+  color: #1B3447;
+  height: 100%;         /* Certifique-se que ocupa toda a altura */
+  min-height: 400px;    /* Para garantir espaço pro iframe */
+}
+
+/* Player com bordas arredondadas */
+#player {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* necessário para aplicar bordas no iframe */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(209, 2, 99, 0.3);
+    background-color: #ffffff; /* ← Adicione esta linha */
+
+}
+
+#player iframe {
+  width: 100%;
+  max-width: 460px;
+  height: 100%;
+max-height: 360px;
+aspect-ratio: 1/1;
+  border: none;
+  display: block;
+    background-color: white; /* ← Também pode adicionar aqui, se necessário */
+
+}
+
+/* Mensagem */
+#mensagem {
+  flex: 1;
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 1.5;
+  color: #34495E;
+  user-select: none;
+  padding: 10px;
+  text-align: left;
+  
+}
+
+/* Botões */
+.buttons {
+  background-color: #f6dce9;
+  padding: 25px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px; /* ou outra largura que funcione visualmente */
+  flex-shrink: 0; /* impede de encolher quando a tela é pequena */
+}
+
+.buttons button {
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-weight: 700;
+  background-color: #f35c6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+
+}
+
+button:hover {
+  background-color: #d33164;
+  border-color: #026C9E;
+  box-shadow: 0 5px 12px rgba(2, 104, 153, 0.4);
+}
+
+@media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+      }
+
+      .buttons {
+        width: 100%;
+        padding: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .buttons button {
+        flex: 1 1 100%;
+      }
+
+      .player-area {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      #mensagem {
+        text-align: center;
+      }
+
+      #player iframe {
+         max-width: 250px;  
+        
+        height: 240px;
+      }
+    }
